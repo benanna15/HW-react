@@ -18,7 +18,7 @@ const Toogle = () => {
         <div className='toggle-text'>Coucou</div>
     }
 
-        <button className="toggle" onClick={() => ActivToogle()}>Click ici</button>
+        <button className="toggle-button" onClick={() => ActivToogle()}>Click ici</button>
         
     </div>
   )
