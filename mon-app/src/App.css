@@ -2,8 +2,9 @@ body{
   font-family: 'Roboto', sans-serif;
 }
 .conteneur{
-  width: 1200px;
-  margin: 0 auto;
+  max-width: 1200px;
+width: 100%;
+margin: 0 auto;
 }
 header{
   background-color: gainsboro;
@@ -46,6 +47,7 @@ header{
 nav .conteneur .flex-menu{
   display: flex;
   justify-content: center;
+  
 }
 nav .conteneur .flex-menu a{
   margin: 5px 50px;
@@ -252,34 +254,6 @@ footer nav.conteneur a:hover{
 footer p.conteneur{
   margin: 10px auto;
 }
-@media screen and (max-width: 1230px) {
-  .conteneur{
-      width: 100%;
-  }
-  figure#milieu-haut-gauche{
-      display: none;
-  }
-  #milieu-haut-droit{
-      width: 100%;
-  }
-  main .flex-main{
-      display: block;
-  }
-  main section#presentation {
-      width: 85%;
-      margin: auto;
-  }
-  main aside {
-      width: 85%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-around;
-  }
-  main aside div.encart {
-      margin: 0px;
-      width: 30%;
-  }
-}
 
 .counter-page{
   margin: 2em;
@@ -423,7 +397,41 @@ font-family: "Poppins", sans-serif;
   width: 26%;
 }
 
+@media screen and (max-width: 1230px) {
+  .conteneur{
+      width: 100%;
+  }
+
+  figure#milieu-haut-gauche{
+      display: none;
+  }
+  #milieu-haut-droit{
+      width: 100%;
+  }
+  main .flex-main{
+      display: block;
+  }
+  main section#presentation {
+      width: 85%;
+      margin: auto;
+  }
+  main aside {
+      width: 85%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+  }
+  main aside div.encart {
+      margin: 0px;
+      width: 30%;
+  }
+}
+
+
+
 @media screen and (max-width: 870px) {
+
+  
     main section#presentation .mise-en-avant {
         display: flex;
         flex-wrap: wrap;
@@ -434,6 +442,15 @@ font-family: "Poppins", sans-serif;
     }
 }
 @media screen and (max-width: 570px) {
+ 
+  nav .conteneur .flex-menu {
+    flex-wrap: wrap;
+  }
+  nav .conteneur .flex-menu a {
+    margin: 5px;
+    font-size: 16px;
+  }
+ 
   nav .conteneur .flex-menu a{
       margin: 0;
   }
