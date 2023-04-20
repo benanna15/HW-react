@@ -33,8 +33,8 @@ const PortfolioUseEffect = () => {
                 <h1>{row.Titre}</h1>
                <img src={row.Image} alt="Project Image" className='img-fluid col-md-6 col-lg-4 mx-auto'/>
                
-               <h4>{row.Titre_Lien}</h4>
-               <a href={row.Lien}>{row.Lien}</a>
+               <h4>{row.Titre_1}</h4>
+               <p>{row.Texte1}</p>
                <h4>{row.Titre_text}</h4>
                <p>{row.Texte}</p>
               
