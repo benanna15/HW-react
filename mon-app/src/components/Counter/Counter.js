@@ -1,7 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
 const Counter = () => {
-    const [counter, setCounter] = useState(0)
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+
+      document.title =`le compteur est à ${counter}`
+
+    },[counter]);
 
     const Increment = () => {
       setCounter(counter +1)
