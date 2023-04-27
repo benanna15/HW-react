@@ -37,6 +37,8 @@ const changeOnOver=() => {
               <Dropdown.Item as={Link} to="/UseEffectcompo">Action</Dropdown.Item>
               <Dropdown.Item  as={Link} to="/Compteur" >Compteur useEffect</Dropdown.Item>
               <Dropdown.Item >Something else</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/SetIntervalCompo">Set Interval</Dropdown.Item>
+              <Dropdown.Item as={Link} to="/MouseMove">Mouse Move</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
 

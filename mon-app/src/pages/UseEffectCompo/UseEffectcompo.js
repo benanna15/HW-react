@@ -27,8 +27,11 @@ const UseEffectcompo = () => {
       <h1>hello useEffect</h1>
       {
         data?.map( (row)=>(
+          
+          <Link className='text-decoration-none text-dark' to={`/article/${row.id}`} >
+
             <div key={row.id} className='bg-secondary shadow-lg rounded m-3 p-3'>
-              <img src={row.image} alt="Project Image" className='image-size' />
+              <img src={row.image} alt="Project Image" className='image-size img-fluid' />
                <h2>{row.title}</h2>
                <p>{row.article}</p>
                <p>{row.text}</p>
@@ -37,6 +40,8 @@ const UseEffectcompo = () => {
                <button className='btn btn-success'>valide</button>
                <button className='btn btn-warning'>warning</button>
             </div>
+
+            </Link>
         ))
       }
       <Link to="/">
