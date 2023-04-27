@@ -1,0 +1,13 @@
+.navbar{
+width: auto;
+}
+a{
+    margin: 5px 30px;
+    color: black !important;
+ text-decoration: none !important;
+}
+a:hover {
+    color: gray !important; 
+    text-decoration: none !important; 
+  }
+
