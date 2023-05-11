@@ -1,0 +1,16 @@
+{
+  "header": {},
+  "nav": {
+    "login": "s'authentifier",
+    "blog":"Blog",
+    "cv":"CV",
+    "portfolio":"Portfolio"
+  },
+  "navbar": {
+    "langue": "Langue"
+  },
+  "Portfolio": {
+    "title": "Tous mes projets"
+  },
+  "footer": {}
+}

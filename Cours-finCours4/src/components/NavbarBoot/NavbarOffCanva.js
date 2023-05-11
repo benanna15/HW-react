@@ -5,10 +5,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-router-dom"
+import DropI18N from "../DropI18N/DropI18N";
+import { useTranslation } from "react-i18next";
 
 function NavbarOffCanva() {
 
   const [isAuth, setIsAuth] = useState(false);
+  const { t } = useTranslation()
   
 useEffect(() => {
   if(localStorage.getItem("tokenBlog")){
@@ -41,15 +44,23 @@ setIsAuth(false)
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/">Portfolio</Nav.Link>
-                  <Nav.Link as={Link} to="/cv">Cv</Nav.Link>
-                  <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
+                  <Nav.Link as={Link} to="/">{t("nav.portfolio")}</Nav.Link>
+                  <Nav.Link as={Link} to="/cv">{t("nav.cv")}</Nav.Link>
+                  <Nav.Link as={Link} to="/blog">{t("nav.blog")}</Nav.Link>
 
-                  <Nav.Link as={Link} to="/login">Login</Nav.Link>
+                 <DropI18N />
+
+              
+                
+                  
+
+
+                  <Nav.Link as={Link} to="/login">{t("nav.login")}</Nav.Link>
                  
                 {
                   isAuth &&
                   <>
+                 
                  
                 
                   <NavDropdown title="Modif-Portfolio" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
@@ -161,6 +172,16 @@ setIsAuth(false)
                   </NavDropdown>
                   </>
                 }
+
+                  <NavDropdown title="Form" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
+                    <NavDropdown.Item as={Link} to="/HKBase">Hook Form Base </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/HFSelect">Hook Form Select </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/HFBlur">Hook Form Blur </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/FormikExemple">Formik </NavDropdown.Item>
+                    
+                  </NavDropdown>
+
+
 
                   
                 </Nav>

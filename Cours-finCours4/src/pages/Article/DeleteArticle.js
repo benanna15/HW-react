@@ -1,4 +1,4 @@
-import React, { useRef, useState} from 'react'
+import React, { useRef, useState } from 'react'
 import axios from 'axios'
 
 const DeleteArticle = () => {
@@ -21,7 +21,7 @@ const DeleteArticle = () => {
   }
 }).then(function(response){
 if (response.data.Table.length >0 ){
-  axios.get('https://promises-cb263f.appdrag.site/api/DeleteArticle', {
+  axios.get('https://promises-cb263f.appdrag.site/api/deleteArticle', {
   params: {
     "id" : inputRef.current.value
   }
@@ -55,6 +55,11 @@ if (response.data.Table.length >0 ){
         {messageError && <h1 className="text-danger">Rien n'a été supprimé</h1>}
 
         {messageSucces &&<h1 className="text-success">La suppression a fonctionné</h1>}
+
+       {/*  {messageSucces ? 
+        <h1 className="text-danger">Rien n'a été supprimé</h1>
+        :<h1 className="text-success">La suppression a fonctionné</h1>} */}
+        
     </form>
    
   )

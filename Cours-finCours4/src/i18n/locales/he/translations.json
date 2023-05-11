@@ -1,0 +1,17 @@
+{
+  "header": {},
+  "nav": {
+    "login": "אזור אישי",
+    "blog":"בלוג",
+    "cv":" קורות חיים",
+    "portfolio": "תיק עבודות"
+  },
+  "navbar": {
+    "langue":"שפה"
+  },
+  "Portfolio": {
+    "title": "תיק עבודות"
+  },
+
+  "footer": {}
+}

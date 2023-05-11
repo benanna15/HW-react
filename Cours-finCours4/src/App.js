@@ -29,10 +29,14 @@ import AddArticle from './pages/Article/AddArticle';
 import UpdateArticle from './pages/Article/UpdateArticle';
 import DeleteArticle from './pages/Article/DeleteArticle';
 
-import AddPortfolio from './pages/Portfolio/AddPortfolio.js'
-import DeletePortfolio from './pages/Portfolio/DeletePortfolio.js'
-import UpdatePortfolio from './pages/Portfolio/UpdatePortfolio.js'
+import AddPortfolio from './pages/Portfolio/AddPortfolio'
+import DeletePortfolio from './pages/Portfolio/DeletePortfolio'
+import UpdatePortfolio from './pages/Portfolio/UpdatePortfolio'
 
+import HKBase from './pages/HookForm/HKbase'
+import HFSelect from './pages/HookForm/HFSelect'
+import HFBlur from './pages/HookForm/HFBlur'
+import FormikExemple from './pages/HookForm/FormikExemple'
 function App() {
 
   return (
@@ -75,6 +79,11 @@ function App() {
         <Route path="/AddArticle" element={<AddArticle />} />
         <Route path="/UpdateArticle" element={<UpdateArticle />} />
         <Route path="/DeleteArticle" element={<DeleteArticle />} />
+
+        <Route path="/HKBase" element={<HKBase />} />
+        <Route path="/HFSelect" element={<HFSelect />} />
+        <Route path="/HFBlur" element={<HFBlur />} />
+        <Route path="/FormikExemple" element={<FormikExemple />} />
 
 
         <Route path="*" element={<PageError />} />

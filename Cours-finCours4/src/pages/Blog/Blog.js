@@ -2,11 +2,16 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import { Link } from "react-router-dom" // step 1 jimporte le link
 import NavbarOffCanva from '../../components/NavbarBoot/NavbarOffCanva'
+import i18n from '../../i18n/config'
 
 const Blog = () => {
   const [data, setData] = useState();
   const [activeFooter, setActiveFooter] = useState(false);
+  const [language, setLanguage] = useState();
 
+  useEffect(() => {
+    console.log("language", language);
+  }, [language]);
   useEffect(() => {
     
     console.log("mon composant est montE")
@@ -23,6 +28,19 @@ const Blog = () => {
 
   }, []);
 
+  useEffect(() => {
+     const handleChangeLanguage = () => {
+      console.log('la langue a changé ! Nouvelle langue :', i18n.language);
+      setLanguage(i18n.language)
+     }
+     i18n.on('languageChanged', handleChangeLanguage)
+     return () => {
+       i18n.off('languageChanged',handleChangeLanguage)
+     }
+    },[i18n])
+     
+   
+     
 
   const HandleFooter = () => {
     setActiveFooter(!activeFooter)
@@ -36,14 +54,14 @@ const Blog = () => {
           {
             data?.map((row) => (
               // je place mon link avec les backticks
-              <Link className='text-decoration-none text-dark' to={`/article/${row.id}`}>
+              <Link key={row.id} className='text-decoration-none text-dark' to={`/article/${row.id}`}>
 
-                <div key={row.id} className='bg-secondary shadow-lg rounded m-3 p-3'>
+                <div  className='bg-secondary shadow-lg rounded m-3 p-3'>
                   <img src={row.image} className='img-fluid image-size' alt="" />
-                  <h2>{row.title}</h2>
-                  <p>{row.article/* .slice(0, 100) */}...</p>
+                  <h2> {language === "he" ? row.titleHE : language === "en" ? row.titleEN : row.title }</h2>
+                  <p>{language === "he" ? row.articleHE : language === "en" ? row.articleEN : row.article /* .slice(0, 100) */ }...</p>
                   
-                  <p>{row.auteur}</p>
+                  <p>{ language === "he" ?  row.auteurHE : (language === "en" ? row.auteurEN : (language === "he" ? row.auteur: ""))}</p>
 
                 </div>
               </Link>
