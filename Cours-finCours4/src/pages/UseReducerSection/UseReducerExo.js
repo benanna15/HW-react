@@ -18,7 +18,7 @@ function reducer (state, action){
 
             case "aleatoire":
             
-            return {count : Math.round(state.count * Math.random()) }
+            return {count : state.count * Math.random() }
 
             case "reset":
             
