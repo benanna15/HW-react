@@ -37,16 +37,36 @@ import HKBase from './pages/HookForm/HKbase'
 import HFSelect from './pages/HookForm/HFSelect'
 import HFBlur from './pages/HookForm/HFBlur'
 import FormikExemple from './pages/HookForm/FormikExemple'
+import FilterSection from './pages/FilterSection/FilterSection';
+import FilterSearch from './pages/FilterSection/FilterSearch';
+import FindSection from './pages/FilterSection/FindSection';
+import UseReducerSection from './pages/UseReducerSection/UseReducerSection'
+import UseReducerExo from './pages/UseReducerSection/UseReducerExo';
+
+
 function App() {
 
   return (
       <Routes>
      
         <Route index element={<Home />} />
+        
         <Route path="/cv" element={<Cv />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/article/:id" element={<Article />} />
         <Route path="/Portfolio" element={<Portfolio />} />
+        <Route path="/FilterSection" element={<FilterSection />} />
+        <Route path="/FilterSearch" element={<FilterSearch />} />
+        <Route path="/FindSection" element={<FindSection/>} />
+        <Route path="/UseReducerSection" element={<UseReducerSection/>} />
+        <Route path="/UseReducerExo" element={<UseReducerExo/>} />
+        <Route path="/resultat/" element={<Article />} />
+        
+
+       
+       
+        
+
 
         <Route path="/AddPortfolio" element={<AddPortfolio />} />
         <Route path="/DeletePortfolio" element={<DeletePortfolio />} />

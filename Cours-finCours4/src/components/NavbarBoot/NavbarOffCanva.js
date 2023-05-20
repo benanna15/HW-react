@@ -7,10 +7,15 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-router-dom"
 import DropI18N from "../DropI18N/DropI18N";
 import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom"
 
 function NavbarOffCanva() {
 
   const [isAuth, setIsAuth] = useState(false);
+
+  let location = useLocation()
+  console.log("location",location.pathname)
+
   const { t } = useTranslation()
   
 useEffect(() => {
@@ -44,10 +49,11 @@ setIsAuth(false)
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/">{t("nav.portfolio")}</Nav.Link>
-                  <Nav.Link as={Link} to="/cv">{t("nav.cv")}</Nav.Link>
-                  <Nav.Link as={Link} to="/blog">{t("nav.blog")}</Nav.Link>
-
+                  <Nav.Link as={Link} to="/"><span className={` ${location.pathname === "/"? "fw-bold" : ""}`}>{t("nav.portfolio")}</span></Nav.Link>
+                  
+                  <Nav.Link as={Link} to="/cv"><span className={` ${location.pathname === "/cv"? "fw-bold" : ""}`}>{t("nav.cv")}</span></Nav.Link>
+                  <Nav.Link as={Link} to="/blog"><span className={` ${location.pathname === "/blog" ? "fw-bold" : ""}`}>{t("nav.blog")}</span></Nav.Link>
+                  <Nav.Link as={Link} to="/UseReducerExo"><span className={` ${location.pathname === "/UseReducerExo"? "fw-bold" : ""}`}>{t("UseReducerExo")}</span></Nav.Link>
                  <DropI18N />
 
               
@@ -77,7 +83,7 @@ setIsAuth(false)
                   }}>Logout</Nav.Link>
 
                   {/* UseState */}
-                  <NavDropdown title="UseState" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
+                  <NavDropdown active= {location.pathname === "/PresUseState" ? "fw-bold" : ""} title="UseState" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
                     <NavDropdown.Item as={Link} to='/PresUseState'>Presentation du hooks</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/usfObject">
                       UseState Object
