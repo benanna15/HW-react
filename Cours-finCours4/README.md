@@ -72,3 +72,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
  navigator.clipboard.writeText("LT21 3750 0200 0374 3140")
+
+### `darkmode` avec redux
+
+creer une slice dark.slice.js avec un toogle qui renvoie l'etat
+ajouter le slice dans le store
+creer le bouton toogle ds la navbar et ajouter un useffect qui selon l etat modifie la couleur de fond et la police

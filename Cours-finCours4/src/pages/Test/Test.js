@@ -1,4 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react'
+import NavbarOffCanva from '../../components/NavbarBoot/NavbarOffCanva'
+import GrandPereC from '../../components/PropDrilling/GrandPereC'
+
+const Test = () => {
+  return (
+    <div>
+      <NavbarOffCanva/>
+      <h1>Hello Test</h1>
+      <GrandPereC/>
+      
+    </div>
+  )
+}
+
+export default Test
+
+
+
+
+
+
+
+
+
+
+
+/* import React, { Component } from 'react';
 
 class UserList extends Component {
   constructor(props) {
@@ -65,4 +92,4 @@ componentWillUnmount(){
   }
 }
 
-export default UserList;
+export default UserList; */

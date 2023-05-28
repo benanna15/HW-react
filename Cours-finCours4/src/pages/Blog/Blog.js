@@ -3,13 +3,19 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import NavbarOffCanva from '../../components/NavbarBoot/NavbarOffCanva';
 import i18n from '../../i18n/config';
+import useDocumentTitle from '../../components/UseCustom/useDocumentTitle';
+import useFetch from '../../components/UseCustom/useFetch';
+
 
 const Blog = () => {
-  const [data, setData] = useState([]);
+ const [data, setData] = useState([]);
   const [activeFooter, setActiveFooter] = useState(false);
   const [language, setLanguage] = useState('');
   const [valueInput, setValueInput] = useState('');
   const [resultat, setResultat] = useState([]);
+
+  useDocumentTitle("blog de ouf")
+  
 
   useEffect(() => {
     axios
@@ -22,8 +28,10 @@ const Blog = () => {
       .then(function (response) {
         console.log(response.data.Table);
         setData(response.data.Table);
-      });
-  }, []);
+      }).catch (console.log("error")) 
+  }, []); 
+
+ // const { data , loading , error }=useFetch('https://promises-cb263f.appdrag.site/api/getAllArticles')
 
   useEffect(() => {
     const handleChangeLanguage = () => {

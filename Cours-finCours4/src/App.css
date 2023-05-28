@@ -530,3 +530,15 @@ table {
 border-collapse: collapse;
 border-spacing: 0;
 }
+body.dark-mode {
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-mode * {
+  color: #fff;
+}
+
+.white-text {
+  color: white !important;
+}

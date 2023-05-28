@@ -8,31 +8,74 @@ import { Link } from "react-router-dom"
 import DropI18N from "../DropI18N/DropI18N";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom"
+import { useSelector } from "react-redux";
+import { getToken } from '../../redux/slices/auth.slice'
+import { useDispatch } from 'react-redux';
+import { setAuth } from "../../redux/slices/auth.slice";
+import { toggleDarkMode } from "../../redux/slices/dark.slice";
+import Button from 'react-bootstrap/Button';
+
+
 
 function NavbarOffCanva() {
 
-  const [isAuth, setIsAuth] = useState(false);
+
+  const darkMode = useSelector((state) => state.dark);
+
+  const dispatch = useDispatch();
+
+  const handleToggleDarkMode = () => {
+    
+    dispatch(toggleDarkMode());
+  };
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
+  //const [isAuth, setIsAuth] = useState();
 
   let location = useLocation()
   console.log("location",location.pathname)
-
+const GETTOKEN =useSelector(getToken)
+console.log("GETTOKEN",GETTOKEN);
+console.log(typeof GETTOKEN)
+//const _getToken =useSelector((state)=>state.auth.fetchAuth.token)
+//console.log("_getToken", _getToken );
   const { t } = useTranslation()
   
-useEffect(() => {
+/* useEffect(() => {
   if(localStorage.getItem("tokenBlog")){
   console.log("localSotorage plein je suis auth");
-  setIsAuth(true)
+// setIsAuth(true)
 }else{
 console.log("je ne suis pas auth");
-setIsAuth(false)
+//setIsAuth(false)
 }
-}, []);
+}, []); */
+
+/* const dispatch = useDispatch();
+
+useEffect(() => {
+  const storedToken = localStorage.getItem("tokenBlog");
+  if (storedToken) {
+    dispatch(setAuth(true));
+  } else {
+    dispatch(setAuth(false));
+  }
+}, []); */
 
   return (
     <>
+
       {["sm"].map((expand) => (
-        <Navbar key={expand} bg="warning" expand={expand} className="mb-3 ">
-          <Navbar.Collapse >
+      
+        <Navbar key={expand} bg={darkMode ? "dark" : "warning"}  expand={expand} className={darkMode ? "text-white mb-3" : "mb-3"} >
+       <Button onClick={handleToggleDarkMode} variant="dark" className="btn-sm m-1">DarkMode</Button>
+
+        <Navbar.Collapse >
           <Container className="mx-auto">
             <Navbar.Brand href="/">Cours React js</Navbar.Brand>
             <Navbar.Toggle   aria-controls={`offcanvasNavbar-expand-${expand}`}  />
@@ -64,15 +107,15 @@ setIsAuth(false)
                   <Nav.Link as={Link} to="/login">{t("nav.login")}</Nav.Link>
                  
                 {
-                  isAuth &&
+                  GETTOKEN &&
                   <>
                  
                  
                 
-                  <NavDropdown title="Modif-Portfolio" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
-                    <NavDropdown.Item as={Link} to="/AddPortfolio">Add Portfolio </NavDropdown.Item>
+                  <NavDropdown title="Modif-Portfolio" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"}  >
+                    <NavDropdown.Item as={Link} to="/AddPortfolio" >Add Portfolio </NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/DeletePortfolio"> Delete Portfolio</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/UpdatePortfolio">  Update Portfolio </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to="/UpdatePortfolio" >  Update Portfolio </NavDropdown.Item>
                   </NavDropdown>
 
 
@@ -83,7 +126,7 @@ setIsAuth(false)
                   }}>Logout</Nav.Link>
 
                   {/* UseState */}
-                  <NavDropdown active= {location.pathname === "/PresUseState" ? "fw-bold" : ""} title="UseState" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
+                  <NavDropdown active= {location.pathname === "/PresUseState" ? "fw-bold" : ""} title="UseState" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"} >
                     <NavDropdown.Item as={Link} to='/PresUseState'>Presentation du hooks</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/usfObject">
                       UseState Object
@@ -95,7 +138,7 @@ setIsAuth(false)
                   </NavDropdown>
 
                   {/* UseEffect */}
-                  <NavDropdown title="UseEffect" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
+                  <NavDropdown title="UseEffect" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"}  >
                     <NavDropdown.Item as={Link} to="/PresUseEffect">Presentation UseEffect</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/UefVide">
                       UseEffect []
@@ -115,7 +158,7 @@ setIsAuth(false)
 
 
                   {/* API */}
-                  <NavDropdown title="API" id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  <NavDropdown title="API" id={`offcanvasNavbarDropdown-expand-${expand}` } menuVariant={darkMode ? "dark" : "light"}
                   >
                     <NavDropdown.Item href="#action3">Axios get</NavDropdown.Item>
                     <NavDropdown.Item href="#action3">Axios post</NavDropdown.Item>
@@ -127,7 +170,7 @@ setIsAuth(false)
                   </NavDropdown>
 
                   {/* Router */}
-                  <NavDropdown title="Router" id={`offcanvasNavbarDropdown-expand-${expand}`} >
+                  <NavDropdown title="Router" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"}>
                     <NavDropdown.Item href="#action3">Fonctionnement</NavDropdown.Item>
                     <NavDropdown.Item href="#action3">Page 404</NavDropdown.Item>
                     <NavDropdown.Item href="#action3">route dynamique</NavDropdown.Item>
@@ -144,19 +187,19 @@ setIsAuth(false)
                   </NavDropdown>
 
                   {/* DataTable */}
-                  <NavDropdown title="DataTable" id={`offcanvasNavbarDropdown-expand-${expand}`} >
+                  <NavDropdown title="DataTable" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"}>
                     <NavDropdown.Item as={Link} to="/DataTableBasique">DataTable Basique</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/DataTableSort">DataTableSort</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/DataTableFull">DataTable Full</NavDropdown.Item>
                   </NavDropdown>
 
                   {/* Redux */}
-                  <NavDropdown title="Authentification" id={`offcanvasNavbarDropdown-expand-${expand}`} >
+                  <NavDropdown title="Authentification" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"}>
                     <NavDropdown.Item href="#action3">Comment ca marche ?</NavDropdown.Item>
                   </NavDropdown>
 
                   {/* Hooks Avancé */}
-                  <NavDropdown title="Hooks Avancé" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
+                  <NavDropdown title="Hooks Avancé" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"} >
                     <NavDropdown.Item as={Link} to="/DataTableFull">UseReducer</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/DataTableFull">UseMemo</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/DataTableFull">UseCallback</NavDropdown.Item>
@@ -165,13 +208,13 @@ setIsAuth(false)
                   </NavDropdown>
 
                   {/* Redux */}
-                  <NavDropdown title="Redux" id={`offcanvasNavbarDropdown-expand-${expand}`} >
+                  <NavDropdown title="Redux" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"} >
                     <NavDropdown.Item as={Link} to="/DataTableFull">Environnement</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/DataTableFull">UseSelector</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/DataTableFull">UseDispatch</NavDropdown.Item>
                   </NavDropdown>
 
-                  <NavDropdown title="Articles" id={`offcanvasNavbarDropdown-expand-${expand}`} >
+                  <NavDropdown title="Articles" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"}>
                     <NavDropdown.Item as={Link} to="/AddArticle">add Article</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/DeleteArticle">Delete Article</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/UpdateArticle">Update Article</NavDropdown.Item>
@@ -179,7 +222,7 @@ setIsAuth(false)
                   </>
                 }
 
-                  <NavDropdown title="Form" id={`offcanvasNavbarDropdown-expand-${expand}`}  >
+                  <NavDropdown title="Form" id={`offcanvasNavbarDropdown-expand-${expand}`} menuVariant={darkMode ? "dark" : "light"} >
                     <NavDropdown.Item as={Link} to="/HKBase">Hook Form Base </NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/HFSelect">Hook Form Select </NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/HFBlur">Hook Form Blur </NavDropdown.Item>
@@ -204,6 +247,7 @@ setIsAuth(false)
             </Navbar.Offcanvas>
           </Container>
           </Navbar.Collapse>
+
         </Navbar>
       ))}
 

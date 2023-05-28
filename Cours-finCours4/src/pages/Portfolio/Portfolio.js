@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../i18n/config';
+import { useSelector } from 'react-redux';
+import { getPseudo } from "../../redux/slices/auth.slice"
 
 const Portfolio = () => {
   const [data, setData] = useState();
@@ -9,6 +11,20 @@ const Portfolio = () => {
   const [projet, setProjet] = useState("");
   console.log('projet', projet);
   const { t } = useTranslation();
+
+  const GETPSEUDO = useSelector(getPseudo)
+
+  const darkMode = useSelector((state) => state.dark);
+
+
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
 
   useEffect(() => {
     console.log('mon composant est monté', process.env);
@@ -52,16 +68,17 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="container">
-      <button className='btn btn-dark m-2' onClick={() => handleButtonClick('html')}>HTML</button>
+    <div  className={`${"container"}`}  >
+      <button className={`${darkMode ? 'border border-warning ' : ''} btn btn-dark m-2`} onClick={() => handleButtonClick('html')} >HTML</button>
       <button className='btn btn-success m-2' onClick={() => handleButtonClick('javascript')}>JavaScript</button>
       <button className="btn btn-primary m-2" onClick={() => handleButtonClick('react')}>React</button>
       <button className="btn btn-info m-2" onClick={() => handleButtonClick('init')}>Init</button>
 
       <h1>{t('Portfolio.title')}</h1>
+      <h1> Bonjour {GETPSEUDO} </h1>
       {filteredProducts && filteredProducts.length > 0 ? (
         filteredProducts.map((row) => (
-          <div key={row.id} className="bg-white shadow-lg rounded m-auto mt-3 p-3 col-md-8 col-lg-6">
+          <div key={row.id} className={`${darkMode ? 'bg-black border border-warning text-white' : 'bg-white '} shadow-lg rounded m-auto mt-3 p-3 col-md-8 col-lg-6`}>
             <h2>{language === 'he' ? row.TitreHE : language === 'en' ? row.TitreEN : row.Titre}</h2>
             <img src={row.Image} className="img-fluid shadow rounded" alt="" />
             <a href={row.url}>{row.url}</a>
