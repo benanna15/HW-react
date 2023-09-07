@@ -1,0 +1,813 @@
+.flex-main{
+    display: flex;
+    position: relative;
+   
+  }
+ 
+  main section#presentation{
+  
+    width: 70%;;
+  }
+  .encart-droite{
+    border-top: 1px solid  rgba(254, 205, 170);
+    border-bottom: 1px solid  rgba(254, 205, 170);
+    font-size: 26px;
+    font-weight: bold;
+    color:  rgb(132, 130, 129);
+    padding: 10px;
+    
+    margin: 4vw 4vw 0 4vw;
+   
+    text-align: center;
+  }
+  .encart-droite-formation{
+  
+    border-top: 1px solid  rgba(254, 205, 170);
+    border-bottom: 1px solid  rgba(254, 205, 170);
+    font-size: 26px;
+    font-weight: bold;
+    color:  rgb(132, 130, 129);
+    padding: 10px;
+    
+    margin: 3vw 4vw 0 0vw;
+    
+    text-align: center;
+  }
+  main section#presentation h2{
+    border-top: 1px solid  rgba(254, 205, 170);
+    border-bottom: 1px solid  rgba(254, 205, 170);
+    font-size: 26px;
+    font-weight: bold;
+    color:  rgb(132, 130, 129);
+    padding: 10px;
+    margin-top: 20px;
+  }
+  main section#presentation .profil-flex{
+    margin: 40px 0;
+    display: flex;
+  }
+  main section#presentation .profil-flex img{
+    display: block;
+    width: 15%;
+  }
+  main section#presentation .profil-flex p{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: justify;
+    text-align-last: left;
+    line-height: 23px;
+    font-size: 15px;
+  }
+  main section#presentation .mise-en-avant{
+    display: flex;
+    justify-content: space-between;
+  }
+  main section#presentation .mise-en-avant figure{
+    position: relative;
+    width: 25%;
+    margin-top: 1vw ;
+    /* align-items: center;
+    position: relative; */
+  }
+  main section#presentation .mise-en-avant h4{
+    position: absolute;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin:1vw auto 0 auto;
+  }
+  main section#presentation .mise-en-avant img{
+   
+    width: 6vw;
+    height: 6vw;
+    margin: 63px auto 4px auto;
+    display: block;
+    transition: 0.3s;
+  }
+  main section#presentation .mise-en-avant img:hover{
+    transform: rotate(360deg);   
+  }
+  main section#presentation .mise-en-avant figcaption{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+  }
+  .main-aside{
+    margin-top: 23vw ;
+    width: 30%;
+    
+  }
+  main aside div.encart{
+    border: 1px solid rgb(189, 188, 188);
+    border-radius: 10px;
+   
+    margin-right: 4vw;
+    line-height: 1.5;
+   
+  }
+  .experiences{
+    border: 1px solid rgb(189, 188, 188);
+    border-radius: 10px;
+    margin: 2vw 4vw;
+    margin-bottom: 80px;
+  
+  }
+  .exp-titre{
+    border-bottom: 1px solid rgba(254, 205, 170);
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(254, 205, 170);
+    color: rgb(41, 37, 37);
+    margin:  0 ;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+  }
+  main aside div.encart h3{
+    border-bottom: 1px solid rgba(254, 205, 170);
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(254, 205, 170);
+    color: rgb(41, 37, 37);
+    margin: 0;
+    padding: 10px;
+    
+    text-align: center;
+    font-size: 18px;
+  }
+  main aside div.encart p{
+    padding: 10px;
+    text-align: justify;
+  }
+ /*  main aside div.encart form label,
+  main aside div.encart form input, 
+  main aside div.encart form textarea {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+  }
+  main aside div.encart form textarea{
+    height: 80px;
+    margin-bottom: 10px;
+  }
+  main aside div.encart form input[type=submit]{
+    line-height: 30px;
+    background-color: #8DAAB7;
+    border: 1px solid rgb(192, 187, 187);
+    color: white;
+    border-radius: 5px;
+  } */
+
+/*   .margin-top{
+  margin-top: 20vw;
+  } */
+
+  .section-presentation{
+    margin: 0  4vw ;
+    margin-top: 9vw;
+ 
+  padding: 0.5vw 1vw;
+  height: 25vw;
+
+  }
+
+  .right-div {
+    position: absolute;
+    margin-right: 10vw ;
+    
+    right: 0;
+   
+    padding: 20px;
+    box-sizing: border-box;
+}
+  .cssbuttons-io-button {
+    margin-top: 11vw;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 0.8em 1.5em 0.8em 1.2em;
+    color: white;
+    background: #ff7d00;
+    background: linear-gradient(0deg, rgba(255, 125, 0, 1) 0%, rgba(255, 95, 109, 1) 100%);
+    border: 2px solid #ff7d00;
+    border-radius: 20em;
+  }
+  
+  .cssbuttons-io-button svg {
+    margin-right: 8px;
+  }
+  
+  .cssbuttons-io-button:hover {
+    border-color: white;
+    box-shadow: 0 0.5em 1.5em -0.5em #bf5800;
+  }
+  
+  .cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #bf5800;
+  }
+
+
+  .contactButton {
+    margin:  0 auto 0.9vw auto;
+   /*  background: #60419a;
+    background-image: linear-gradient(135deg, #60419a 0%,#b687f4 100%); */
+    background: #ff7d00;
+    background: linear-gradient(0deg, rgba(255, 125, 0, 1) 0%, rgba(255, 95, 109, 1) 100%);
+    border: 2px solid #ff7d00;
+    color: white;
+    font-family: inherit;
+    padding: 0.45em;
+    padding-left: 1.0em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    border: 2px solid #ff7d00;
+    overflow: hidden;
+    position: relative;
+  
+   
+    padding-right: 3em;
+    border-radius: 20em;
+   
+  }
+  
+  .iconButton {
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    /* box-shadow: 0.1em 0.1em 0.6em 0.2em #7a8cf3; */
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .contactButton:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0 0.5em 1.5em -0.5em #bf5800;
+  }
+  
+  .contactButton:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0 0.5em 1.5em -0.5em #bf5800;
+  }
+
+ /*  formulaire */
+
+
+
+.input {
+  font-size: 16px;
+  padding: 5px 10px 5px 5px;
+  display: block;
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid #515151;
+  background: transparent;
+  margin: 1vw;
+}
+
+.input:focus {
+  outline: none;
+}
+.label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  display: flex;
+}
+
+.label-char {
+  transition: 0.2s ease all;
+  transition-delay: calc(var(--index) * .05s);
+}
+
+.input:focus ~ label .label-char,
+.input:valid ~ label .label-char {
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #5264AE;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 200px;
+}
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #5264AE;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.input:focus ~ .bar:before,
+.input:focus ~ .bar:after {
+  width: 50%;
+}
+.textarea{
+width: 90%;
+}
+.margin-he{
+margin-left: 4vw;
+}
+.heb-form{
+margin-right: 4vw;
+}
+@media (min-width: 300px) and (max-width: 359px) {
+  .flex-main{
+    display: block;
+  }
+  .marge-aside {
+    margin: 0 3vw ;
+   
+    
+   width: 98%;
+}
+.encart-droite{
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+  width: 130%;
+}
+
+.text-center{
+margin-top: 3vw!important;
+}
+  .presentation-div {
+    margin: 45vw 5vw 2vw 2vw;
+    padding: 0.5vw 1vw;
+    height: 170vw;
+    width: 138%;
+}
+.experiences{
+width: 134%;
+margin-left: 3vw;
+margin-bottom: 6vw;
+}
+.contact-he{
+  width:99%!important;
+  margin-right: 0vw!important;
+}
+.tel-form{
+margin-left: -5vw;
+}
+.qsj-he{
+width:99%!important;
+margin-right: 0vw!important;
+}
+.encart-droite-formation{
+margin-top: 6vw!important;
+margin-left: 0vw;
+
+}
+
+
+.cssbuttons-io-button{
+ position: absolute;
+margin-top: -19vw;
+margin-left: -25vw;
+
+
+height: 30px;
+padding: 3px;
+}
+.presentation-he{
+margin-right: 3.5vw;
+}
+
+.contact{
+  margin-top: 2.5vw;
+  height: 85vw;
+  margin-bottom: 3vw;
+}
+.ajout{
+  height: 14vw;
+}
+.download-he{
+
+margin-right: 0px!important;
+}
+
+.contactButton{
+margin-top: 6vw;
+}
+.exp-he{
+width: 139%;
+}
+.exp-titre-he{
+width: 140%;
+margin-right: 2.5vw!important;
+}
+.mise-en-avant{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ margin-left: 30vw;
+  }
+  main section#presentation .mise-en-avant figure {
+    position: relative;
+    width: 50%;
+    margin-top: 01vw;
+  
+}
+  
+
+main section#presentation .mise-en-avant h4 {
+width: 100%;
+font-size: 20px;
+margin-left: 1vw;
+
+
+}
+.img-card{
+  width: 29vw!important;
+  height:29vw!important; 
+
+  
+  margin-left: 4vw!important; 
+}
+}
+
+@media (min-width: 360px) and (max-width: 400px) {
+  .flex-main{
+    display: block;
+  }
+  .marge-aside {
+    margin: 0 3vw ;
+   
+    
+   width: 98%;
+}
+.encart-droite{
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+  width: 130%;
+}
+
+.text-center{
+margin-top: 3vw!important;
+}
+  .presentation-div {
+    margin: 34vw 5vw 2vw 2vw;
+    padding: 0.5vw 1vw;
+    height: 128vw;
+    width: 138%;
+}
+.experiences{
+width: 134%;
+margin-left: 3vw;
+margin-bottom: 6vw;
+}
+.contact-he{
+  width:99%!important;
+  margin-right: 0vw!important;
+}
+.tel-form{
+margin-left: -5vw;
+}
+.qsj-he{
+width:99%!important;
+margin-right: 0vw!important;
+}
+.encart-droite-formation{
+margin-top: 6vw!important;
+margin-left: 0vw;
+
+}
+
+
+.cssbuttons-io-button{
+ position: absolute;
+margin-top: -15vw;
+margin-left: -19vw;
+
+
+height: 30px;
+padding: 3px;
+}
+.presentation-he{
+margin-right: 3.5vw;
+}
+
+.contact{
+  margin-top: 2.5vw;
+  height: 70vw;
+  margin-bottom: 3vw;
+}
+.ajout{
+  height: 14vw;
+}
+.download-he{
+
+margin-right: 0px!important;
+}
+
+.contactButton{
+margin-top: 6vw;
+}
+.exp-he{
+width: 139%;
+}
+.exp-titre-he{
+width: 140%;
+margin-right: 2.5vw!important;
+}
+.mise-en-avant{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ margin-left: 30vw;
+  }
+  main section#presentation .mise-en-avant figure {
+    position: relative;
+    width: 50%;
+    margin-top: 01vw;
+  
+}
+  
+
+main section#presentation .mise-en-avant h4 {
+width: 100%;
+font-size: 20px;
+margin-left: 1vw;
+
+
+}
+.img-card{
+  width: 29vw!important;
+  height:29vw!important; 
+
+  
+  margin-left: 4vw!important; 
+}
+}
+@media (min-width: 400px) and (max-width: 700px) {
+  .flex-main{
+    display: block;
+  }
+ 
+  
+  .marge-aside {
+    margin: 0 3vw ;
+   
+    
+   width: 98%;
+}
+.encart-droite{
+  margin-top: 6vw;
+  margin-bottom: 6vw;
+  width: 130%;
+}
+.mise-en-avant{
+margin-left: 1vw;
+width: 135%;
+}
+.text-center{
+margin-top: 3vw!important;
+}
+  .presentation-div {
+    margin: 34vw 5vw 2vw 2vw;
+    padding: 0.5vw 1vw;
+    height: 110vw;
+    width: 138%;
+}
+.experiences{
+width: 134%;
+margin-left: 3vw;
+margin-bottom: 6vw;
+}
+.tel-form{
+margin-left: -5vw;
+}
+.qsj-he{
+width:97%!important;
+}
+.encart-droite-formation{
+margin-top: 6vw!important;
+margin-left: 0vw;
+
+}
+
+
+.cssbuttons-io-button{
+ position: absolute;
+margin-top: -14vw;
+margin-left: -15vw;
+
+height: 30px;
+padding: 3px;
+}
+.presentation-he{
+ margin-top: 35vw;
+width: 140%;
+}
+
+.contact{
+  margin-top: 2.5vw;
+  height: 70vw;
+  margin-bottom: 2vw;
+}
+.ajout{
+  height: 14vw;
+}
+.download-he{
+
+margin-right: 0px!important;
+}
+.presentation-he{
+  height: 90vw;
+  
+}
+.contactButton{
+margin-top: 7vw;
+}
+.exp-he{
+width: 139%;
+}
+.exp-titre-he{
+width: 140%;
+}
+}
+@media (min-width: 701px) and (max-width: 900px) {
+  main aside {
+    margin-top: 21vw;
+  height: 28vw;
+ 
+}
+.contact{
+  height: 39vw!important;
+  }
+  .contactButton{
+    margin-top: 4vw;
+    }
+
+  .contact-he{
+   
+  height: 50.8vw!important;
+  }
+  .contactButton-he{
+  margin-top: 9cqw;
+  }
+  .contact-en{
+    height: 45.2vw!important;
+  }
+  .contactButton-en{
+   
+    margin-top: 7vw;
+    }
+main aside div.encart p {
+  padding: 5px;
+  margin: 18px 12px;
+  }
+  .section-presentation {
+ 
+    height: 440px;
+}
+.cssbuttons-io-button{
+  margin-top: 7vw;
+  margin-right: -5vw;
+  height: 6vw;
+  }
+
+}
+@media (min-width: 900px) and (max-width: 1439px) {
+
+  
+
+  .section-presentation {
+ 
+    height: auto!important;
+}
+main aside div.encart p {
+  padding: 5px;
+  margin: 18px 12px;
+  }
+  
+.contactButton{
+  margin-top: 30px;
+}
+.contact{
+height: auto!important;
+padding-bottom: 6px;
+}
+.other{
+height: 7.1vw!important;
+}
+.ajout{
+height: 25px!important;
+}
+}
+@media (min-width: 1440px) and (max-width: 2559px) {
+  main aside div.encart p {
+    padding: 10px;
+    margin: 18px 12px;
+    }
+    main aside div.encart p {
+      padding: 5px;
+      margin: 18px 12px;
+      }
+      .experiences{
+      margin-top: 2.8vw;
+      }
+     .download-he{
+   
+    margin-right: 77vw!important;
+    }
+      .contact{
+      height: 20.9vw;
+      }
+      .contact-he{
+        height: 20.9vw;
+      }
+      .ajout{
+      height: 50px;
+      }
+      .other{
+      height: 1.7vw;
+      }
+}
+
+@media (max-width: 2560px) and (max-width: 3000px) {
+
+  main aside {
+    margin-top: 23vw!important;
+    width: 30%;
+   
+}
+  main aside div.encart p {
+  padding: 10px;
+  margin: 18px 12px;
+ 
+  }
+  .section-presentation {
+    margin: 0 4vw 0 4vw;
+    margin-top: 9.5rem;
+    padding: 0.5vw 1vw;
+    height: 330px;
+
+}
+.cssbuttons-io-button{
+margin-top: 12vw;
+margin-right: 3vw;
+
+}
+.encart-droite {
+  margin-top: 4vw;
+}
+
+
+.encart-droite-formation {
+  margin-top: 1vw;
+}
+
+.contact{
+  margin-top: 2.5vw;
+  height: auto;
+}
+.ajout{
+  height: 1.9vw;
+}
+.other{
+  height: 1.9vw;
+}
+.contactButton{
+
+}
+main section#presentation .mise-en-avant img{
+width: 5vw;
+height: 5vw;
+margin-bottom: 1.6vw;
+}
+}

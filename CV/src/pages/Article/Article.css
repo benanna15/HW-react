@@ -1,0 +1,158 @@
+.border-saumon{
+    
+    margin-bottom: 3vw;
+    border: 2px solid rgba(254, 205, 170);
+   
+    }
+   /*  .d-flex {
+      display: flex;
+      flex-wrap: wrap;
+    } */
+    
+    .m-left{
+      align-items: left!important;
+     ;
+      margin-right: 86.5%;
+    }
+    
+    .img-size {
+      max-width: 60%; /* Empêche la déformation de l'image */
+      height: auto;
+      object-fit: cover;
+      float: right!important;
+      shape-outside: content-box;
+     
+    }
+    
+    .img-size-left {
+      max-width: 60%; /* Empêche la déformation de l'image */
+      height: auto;
+      object-fit: cover;
+      float: left!important;
+      shape-outside: content-box;
+    }
+
+    .margin{
+        margin-top: 10rem ;
+    }
+    .position-titre {
+        right: 0;
+       
+           }
+       
+           @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+       .font1{
+         font-family: 'Fredericka the Great', cursive;
+         font-size: 5vw;
+         text-shadow: #212529 1px 1px 2px;
+       }
+       .font2{
+         font-family: 'Caveat', cursive;
+         font-size: 3.5vw;
+       }
+       
+       .font-title{
+         font-size: 3vw;
+         text-shadow: #212529 1px 1px 2px;
+         margin-top: 2vw;
+       }
+
+       .cta {
+        border: none;
+        background: none;
+        text-decoration: none;
+      }
+      
+      .cta span {
+        padding-bottom: 7px;
+        letter-spacing: 4px;
+        font-size: 14px;
+        padding-right: 15px;
+        text-transform: uppercase;
+      }
+      
+      .cta svg {
+        transform: translateX(-8px);
+        transition: all 0.3s ease;
+      }
+      
+      .cta:hover svg {
+        transform: translateX(0);
+      }
+      
+      .cta:active svg {
+        transform: scale(0.9);
+      }
+      
+      .hover-underline-animation {
+        position: relative;
+        color: black;
+        padding-bottom: 20px;
+      }
+      
+      .hover-underline-animation:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      
+      .cta:hover .hover-underline-animation:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+      @media (max-width: 1024px){
+        .m-left{
+         
+          margin-right: 82%;
+        }
+      }
+        @media (max-width: 768px){
+          .m-left{
+           
+            margin-right: 75%;
+          }
+        }
+          @media (max-width: 425px){
+            .m-left{
+             
+              margin-right: 55%;
+            }
+            .margin{
+            margin-top: 50px;
+            }
+            .font-title{
+            font-size: 20px;
+            }
+      }
+
+
+      @media (max-width: 425px){
+        .m-left{
+         
+          margin-right: 48%;
+        }
+        .margin{
+        margin-top: 35px;
+        }
+        
+  }
+
+  @media (max-width: 320px){
+    .m-left{
+     
+      margin-right: 38%;
+    }
+    .margin{
+    margin-top: 45px;
+    }
+    
+}

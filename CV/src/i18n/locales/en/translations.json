@@ -1,0 +1,62 @@
+{
+  "header": {},
+  "nav": {
+    "login": "Login",
+    "blog":"Blog",
+    "cv":"CV",
+    "portfolio":"My projects",
+    "home":"Home"
+  },
+  "navbar": {
+    "langue": "Language"
+  },
+  "Portfolio": {
+    "title": "My projects"
+  },
+  "footer": {},
+  "accueil":{
+    "texte1": "Hello and welcome to my website !",
+    "texte2": "I'm Anna Beniard, a passionate <span class='bigger'> full stack developer </span> specializing in creating innovative solutions.",
+    "texte3": "I specialize in designing and implementing robust and user-friendly web applications.",
+    "texte4": "Explore my website to learn more about my background, discover my achievements, and get in touch with me.",
+    "entrer": "Enter"
+  },
+  
+"cv": {
+  "presentation": "Presentation",
+  "qsj": "Who am I?",
+  "presentation1": "Passionate about interface development and database management, I was trained and graduated from the Webschool Academy in Tel Aviv.",
+  "presentation2": "I am excited to bring my creative mindset, project management skills, and aesthetic sensibility to my web development projects.",
+  "qui1": "With an initial background in fashion and experience as a stylist/pattern maker, I have nurtured my creativity and artistic sensibility.",
+  "qui2": "However, my passion for visual creation led me to the captivating world of video editing. This transition allowed me to apply my skills while refining my attention to detail and meticulousness.",
+  "qui3": "The combination of my skills enables me to bring a unique and creative approach to the projects I contribute to.",
+  "competences": "Professional Skills",
+  "design": "HTML, CSS, Bootstrap",
+  "fe": "JavaScript, React",
+  "be": "NodeJS, MongoDB",
+  "autre": "Photoshop, Premiere",
+  "experience": "Experience",
+  "dev": "Full Stack Developer",
+  "dev1": "I had the opportunity to apply my skills by working on various projects during my training.",
+  "dev2": "Created a comprehensive project that applied all the skills acquired throughout my training, in collaboration with a multidisciplinary team.",
+  "mont": "Video Editor",
+  "mont1": "As a freelance video editor, I have accumulated over 10 years of experience working with studios and individuals to create video edits.",
+  "stm": "Fashion Stylist-Modelist",
+  "stm1": "Preparation and organization of showcases (collection presentations, showrooms...), pattern corrections",
+  "formation": "Education",
+  "wa": "Webschool Academy",
+  "dw": "Web Development",
+  "ta": "Tel Aviv",
+  "fa": "Self-taught",
+  "mv": "Video Editing",
+  "paris": "Paris",
+  "formamod": "Formamod",
+  "stmo": "Fashion Design and Modeling"
+  },
+  "blog":{
+    "titleblog":"Code & Coffee",
+    "titleblog1":"Diary of a Full Stack Developer",
+    "returnblog":"Back to Blog",
+    "suite":"Read more"
+}
+}

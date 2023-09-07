@@ -1,0 +1,61 @@
+{
+  "header": {},
+  "nav": {
+    "login": "Mon Compte",
+    "blog":"Blog",
+    "cv":"CV",
+    "portfolio":"Portfolio",
+    "home":"Accueil"
+  },
+  "navbar": {
+    "langue": "Langue"
+  },
+  "Portfolio": {
+    "title": "Mes projets"
+  },
+  "footer": {},
+  "accueil":{
+    "texte1":"Bonjour et bienvenue sur mon site !",
+    "texte2":"Je suis Anna Beniard, une <span class='bigger'> développeuse full stack </span> passionnée par la création de solutions innovantes.",
+    "texte3" :"Je suis spécialisée dans la conception et la mise en œuvre d'applications web robustes et conviviales.",
+   "texte4":"Explorez mon site pour en savoir plus sur mon parcours, découvrir mes réalisations et me contacter.",
+   "entrer":"Entrer"
+  },
+  "cv":{
+  "presentation":"Présentation",
+  "qsj":"Qui suis-je ?",
+  "presentation1":"Passionnée par le développement d'interface ainsi que la gestion de base de données, j'ai été formée et diplômée de la Webschool Academy de Tel-Aviv.",
+  "presentation2":"Je suis enthousiaste à l'idée d'apporter mon esprit créatif, mes compétences en gestion de projet et mon sens de l'esthétique à mes projets de développement web.",
+  "qui1":"Avec une formation initiale en mode et une expérience en tant que styliste/modeliste, j'ai développé ma créativité et mon sens artistique.",
+  "qui2":"Cependant, ma passion pour la création visuelle m'a guidée vers le monde captivant du montage vidéo. Cette transition m'a permis de mettre en pratique mes compétences tout en perfectionnant ma rigueur et ma gestion des détails.",
+  "qui3":"Ma combinaison de compétences  me permet d'apporter une approche unique et créative aux projets auxquels je contribue.",
+  "competences":"Compétences professionnelles",
+  "design":"Html, Css, Bootstrap",
+  "fe":"Javascript, React",
+  "be":"NodeJS, MongoDB",
+  "autre":"Photoshop, Premiere",
+  "experience":"Experience",
+  "dev":"Devellopeuse Full Stack",
+  "dev1":"J'ai eu l'occasion de mettre en pratique mes compétences en réalisant divers projets au cours de ma formation. ",
+  "dev2":"Création d'un projet complet qui met en pratique l'ensemble des compétences acquises tout au long de ma formation, en collaboration avec une équipe multidisciplinaire.",
+  "mont":"Monteuse vidéo",
+  "mont1":"En tant que monteuse freelance, j'ai accumulé plus de 10 années d'expérience en travaillant avec des studios et des particuliers pour la réalisation de montages vidéo.",
+  "stm":"Styliste-modeliste",
+  "stm1":"Préparation et mise en place de showcases (présentation de collections, showrooms...), correction de patronnages.",
+  "formation":"Formation",
+  "wa":"Webschool Academy",
+  "dw":"Developpement web",
+  "ta":"Tel-aviv",
+  "fa":"Formation autodidacte",
+  "mv":"Montage video",
+  "paris":"Paris",
+  "formamod":"Formamod",
+  "stmo":"Stylisme-Modélisme"
+  },
+  "blog":{
+  "titleblog":"Code & Coffee",
+  "titleblog1":"Le journal d'une développeuse full stack",
+  "returnblog":"Retour au blog",
+  "suite":"Lire la suite"
+  }
+}

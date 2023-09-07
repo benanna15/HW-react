@@ -1,0 +1,280 @@
+
+    .position-titre {
+ right: 0;
+margin-top: 0.5rem;
+    }
+
+   .align-items-ends{
+    align-items: flex-end;
+  }
+    .search{
+     
+      margin-top: 2vw;
+      margin-bottom: 7vw;
+     
+     }
+    .bckgd-blog::before {
+      content: "";
+      position: absolute;
+      
+      width: 100%;
+      height: 100%;
+      background-color: #fd821e ;
+     
+    
+      z-index: -1;
+    }
+
+    .logo{
+  border: 2px solid black;
+  border-radius: 50px
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+.font1{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 5vw;
+  text-shadow: #212529 1px 1px 2px;
+}
+.font2{
+  font-family: 'Caveat', cursive;
+  font-size: 3.5vw;
+}
+
+.font-title{
+  font-size: 3vw;
+  text-shadow: #212529 1px 1px 2px;
+  margin-top: 2vw;
+}
+.title-art{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.bg-img-color{
+    background-color:rgba(254, 205, 170, 0.322);
+    border: #4040453c 2px solid;
+    /* height: 29em; */ 
+    overflow: hidden;
+    }
+    .center-image {
+      display: block;
+      margin: 0 auto; 
+      text-align: center; 
+      width: 40%!important;
+      height: 40%!important;
+
+    }
+    .margin-left{
+    align-items: left!important;
+    left: 0!important;
+    margin-right: 85%;
+  }
+    .paragraphe{
+      font-size: 16px;
+     margin: auto 10px;
+    }
+    .dir-ltr{
+      direction: ltr!important;
+    }
+    .dir-rtl{
+    direction: rtl!important;
+    }
+   
+   
+
+    @media (min-width: 2560px) and (max-width: 3840px){
+      .font1{
+        font-family: 'Fredericka the Great', cursive;
+        font-size: 3vw!important;
+        
+      }
+      .font2{
+        font-family: 'Caveat', cursive;
+        font-size: 2vw!important;
+      }
+
+    .search{
+     
+     margin-top: 2vw;
+     margin-bottom: 2vw;
+    
+    }
+    .center-image {
+     
+      width: 30vw;
+
+    }
+    .bg-img-color{
+      /* height: 40em;  */
+      width: 100%;
+    
+      }
+      .paragraphe{
+        font-size: 26px;
+        
+      }
+  
+      .title-art{
+        font-size: 44px;
+       
+      }
+     .container{
+    max-width: 1800px!important;
+    }
+ /*    .encart-search{
+      margin-top: 0.2vw;
+    height: 1vw;
+    } */
+   
+    }  
+    @media (max-width: 425px){
+   
+    .marg-top
+    {   margin-top:7vh; 
+      margin-left: 4vw;
+    }
+    
+    .align-items-ends{
+    align-items: center;
+    }
+    .search{
+      margin-top: 0vw!important;
+      margin-bottom: 1rem;
+      margin-right: 0.5rem;
+   
+  }
+    .bg-img-color{
+        
+     
+      width: 100%;
+      }
+     
+      .title-art{
+      
+      margin-top: 2rem!important;}
+
+
+      .div-img{
+        flex-direction: column;
+        margin-right:1vh!important;
+        margin-left: 1vh!important;
+      }
+      .center-image{
+      margin-bottom: 2vw;
+    margin-left:0 ;
+      width: 100%!important;
+      }
+      .paragraphe{
+      text-align: center!important;
+      }
+    .margin-left{
+      padding-top: 30px;
+      margin-right: 75%;
+    }
+    .resp-article{
+    width: 95%!important;
+    }
+
+    }
+
+    @media (min-width: 900px) and (max-width: 1439px) {
+      .bg-img-color{
+        
+       
+        width: 100%;
+      
+        }
+        .margin-left{
+          
+          margin-right: 82%;
+        }
+       
+    }
+
+    @media (min-width: 600px) and (max-width: 768px) {
+      .search{
+       
+       margin-top: 6vw;
+       margin-bottom: 2vw;
+     
+    }
+   
+   
+    .bg-img-color{
+        
+     
+      width: 100%;
+    
+      }
+      .title-art{
+      
+      margin-top: 2rem!important;}
+
+
+      .div-img{
+        flex-direction: column;
+      }
+      .center-image{
+      margin-bottom: 2vw;
+    
+     
+      width: 90%!important;
+      }
+    .margin-left{
+      padding-top: 30px;
+      margin-right: 75%;
+    }
+    } 
+    @media (max-width: 320px){
+      .marg-top
+      {   margin-top:4vh; 
+      
+      }
+      
+      .align-items-ends{
+      align-items: flex-end;
+      }
+      .search{
+        margin-top: 7vw!important;
+        margin-bottom: 0.5rem;
+        margin-right: 0.5rem;
+     
+    }
+    .encart-search{
+      width: 60%;
+    }
+      .bg-img-color{
+          
+       
+        width: 100%;
+        }
+       
+        .title-art{
+        
+        margin-top: 2rem!important;}
+  
+  
+        .div-img{
+          flex-direction: column;
+        }
+        .center-image{
+        margin-bottom: 2vw;
+      
+       
+       
+        }
+      .margin-left{
+        padding-top: 30px;
+        margin-right: 75%;
+      }
+      .resp-article{
+        width: 100%!important;
+        }
+    }
+    @media (max-width: 375px){
+      .resp-article{
+        width: 100%!important;
+        }
+    }

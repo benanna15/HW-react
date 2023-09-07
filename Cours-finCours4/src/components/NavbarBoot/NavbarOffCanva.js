@@ -72,11 +72,11 @@ useEffect(() => {
 
       {["sm"].map((expand) => (
       
-        <Navbar key={expand} bg={darkMode ? "dark" : "warning"}  expand={expand} className={darkMode ? "text-white mb-3" : "mb-3"} >
+        <Navbar key={expand} bg={darkMode ? "dark" : "warning"}  expand={expand} className={darkMode ? "text-white mb-" : "mb-3  "} >
        <Button onClick={handleToggleDarkMode} variant="dark" className="btn-sm m-1">DarkMode</Button>
 
-        <Navbar.Collapse >
-          <Container className="mx-auto">
+        
+          <Container >
             <Navbar.Brand href="/">Cours React js</Navbar.Brand>
             <Navbar.Toggle   aria-controls={`offcanvasNavbar-expand-${expand}`}  />
             
@@ -91,7 +91,7 @@ useEffect(() => {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav className="justify-content-end flex-grow-1 pe-3 ">
                   <Nav.Link as={Link} to="/"><span className={` ${location.pathname === "/"? "fw-bold" : ""}`}>{t("nav.portfolio")}</span></Nav.Link>
                   
                   <Nav.Link as={Link} to="/cv"><span className={` ${location.pathname === "/cv"? "fw-bold" : ""}`}>{t("nav.cv")}</span></Nav.Link>
@@ -246,7 +246,7 @@ useEffect(() => {
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
-          </Navbar.Collapse>
+         
 
         </Navbar>
       ))}
