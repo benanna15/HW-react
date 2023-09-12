@@ -11,6 +11,8 @@ import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import cv_anna_fr from '../../../assets/cv_anna_fr.pdf'
+import cv_anna_en from '../../../assets/cv_anna_en.pdf' 
+import cv_anna_he from '../../../assets/cv_anna_he.pdf'
 const CardPointFort = (props) => {
   // console.log("props depuis CardPointFort",props)
   return (
@@ -93,14 +95,14 @@ const handleSubmit = (e) => {
         downloadLink = cv_anna_fr;
         break;
       case "en":
-        downloadLink = "lien_vers_cv_en_anglais.pdf";
+        downloadLink =cv_anna_en;
         break;
       case "he":
-        downloadLink = "lien_vers_cv_en_hebreu.pdf";
+        downloadLink = cv_anna_he;
         break;
       default:
-        // Par défaut, utilisez le lien français
-        downloadLink = "lien_vers_cv_en_francais.pdf";
+     
+        downloadLink = cv_anna_fr;
         break;
     }
 
