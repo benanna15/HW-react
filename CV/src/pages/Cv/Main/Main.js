@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import cv_anna_fr from '../../../assets/cv_anna_fr.pdf'
 const CardPointFort = (props) => {
   // console.log("props depuis CardPointFort",props)
   return (
@@ -35,22 +35,7 @@ const Main = ({ HandleName }) => {
     return emailRegex.test(email);
   };
  
- /*  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (name === "" || message === "") {
-      alert("Veuillez remplir tous les champs.");
-    } else {
-      alert("Message envoyé !");
-      setName("");
-      setMessage("");
-    }
-  }; */
- /*  const [formData, setFormData] = useState({
-    name: name,
-    mail: mail,
-    message: message,
-  });
- */
+
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -99,6 +84,29 @@ const handleSubmit = (e) => {
     };
   }, [i18n]);
   console.log("HandleName depuis", HandleName);
+
+  const getDownloadLink = () => {
+    let downloadLink = "";
+
+    switch (language) {
+      case "fr":
+        downloadLink = cv_anna_fr;
+        break;
+      case "en":
+        downloadLink = "lien_vers_cv_en_anglais.pdf";
+        break;
+      case "he":
+        downloadLink = "lien_vers_cv_en_hebreu.pdf";
+        break;
+      default:
+        // Par défaut, utilisez le lien français
+        downloadLink = "lien_vers_cv_en_francais.pdf";
+        break;
+    }
+
+    return downloadLink;
+  };
+  
   return (
     <main className={` container ${
       language === "he"
@@ -111,21 +119,7 @@ const handleSubmit = (e) => {
                       : language === 'en' ? ""
                       : " "
                   }`}>
-        <button className=" cssbuttons-io-button ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="20"
-            height="20"
-          >
-            <path fill="none" d="M0 0h24v24H0z"></path>
-            <path
-              fill="currentColor"
-              d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z"
-            ></path>
-          </svg>
-          <span>Download</span>
-        </button>
+       
       </div>
       <div className={` flex-main  ${
                     language === "he"
@@ -166,6 +160,7 @@ const handleSubmit = (e) => {
               img={designok}
               alt={"Design"}
               figcaption={t("cv.design")}
+              className="card-row"
             />
             <CardPointFort
               title="Front-end development"
@@ -190,7 +185,7 @@ const handleSubmit = (e) => {
           <div className={` experiences  ${
                     language === "he"
                       ? "exp-titre-he"
-                      : language === 'en' ? ""
+                      : language === 'en' ? "exp-titre-en"
                       : " "
                   }`}>
             <h3 className="exp-titre">{t("cv.experience")}</h3>
@@ -241,6 +236,32 @@ const handleSubmit = (e) => {
                       : language === 'en' ? ""
                       : ""
                   }`}>
+                     <button  className={`cssbuttons-io-button  ${
+          language === "he"
+            ? "   down-he "
+            : "   "}`}>
+               <a
+               className="text-reset text-decoration-none"
+          href={getDownloadLink()}
+          target="_blank"
+          rel="noopener noreferrer"
+          download
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+          >
+            <path fill="none" d="M0 0h24v24H0z"></path>
+            <path
+              fill="currentColor"
+              d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z"
+            ></path>
+          </svg>
+          <span>Download</span>
+          </a>
+        </button>
           <div className={` encart ${
                     language === "he"
                       ? "qsj-he"
@@ -301,19 +322,7 @@ const handleSubmit = (e) => {
                   }`}>
             <h3>Contact</h3>
 
-            {/*  <label htmlFor="prenom">Prenom</label>
-                            <input placeholder="Prénom" type="text" id="prenom" name="prenom" />
 
-                            <label htmlFor="nom">Nom</label>
-                            <input placeholder="Nom" type="text" id="nom" name="nom" />
-
-                            <label htmlFor="email">E-mail</label>
-                            <input placeholder="E-mail" type="email" id="email" name="email" />
-
-                            <label htmlFor="message">Message</label>
-                            <textarea placeholder="Ecrire votre message" name="message" id="message"></textarea>
-
-                            <input type="submit" onClick={()=>HandleName("test")} /> */}
 
 <input
   required
@@ -358,22 +367,6 @@ const handleSubmit = (e) => {
 <ToastContainer position="top-right" autoClose={3000} />
           </div>
 
-          {/*         <div className="encart ">
-            <h1>Contact</h1>
-            <div class="wave-group">
-            <input required="" type="text" class="input" placeholder="Full Name "></input>
-            <span class="bar"></span>
-            </div>
-            <div class="wave-group ">
-            <textarea required="" type="text" class="input" placeholder="Message" style={{ paddingBottom: '30px' }}/>
-            <span class="bar"></span>
-            </div>
-            <button class="contactButton"> Contact
-  <div class="iconButton">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"></path></svg>
-  </div>
-</button>
-    </div> */}
         </aside>
       </div>
     </main>

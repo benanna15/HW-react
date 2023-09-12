@@ -193,7 +193,7 @@ useEffect(() => {
                   </Nav.Link>
                
 
-              <NavDropdown title={<i className="bi bi-globe mt-2 "></i>}>
+              <NavDropdown title={<i className="bi bi-globe mt-2 me-1 ms-1"></i>}>
                 <DropI18N />
                
               </NavDropdown>

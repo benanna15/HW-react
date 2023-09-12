@@ -437,21 +437,22 @@ font-size: 16px;
 margin-left: 35px;
 
   }
+  
   .logo-compte{
   margin-right: 26px;
   margin-left: 35px;
   }
   .respo-nav {
- margin-left: -40vh;
+margin-left: -8vh;
   }
   .respo-onglets {
-    margin-left: 100vh;
+  
   }
   .border-white{
   border-bottom: white solid 1px;
   }
   .switch{
-  margin-left: 20vh;
+  
   margin-right: -200px;
   } 
 }

@@ -1,7 +1,7 @@
 .flex-main{
     display: flex;
     position: relative;
-   
+     
   }
  
   main section#presentation{
@@ -100,15 +100,18 @@
     padding: 10px;
   }
   .main-aside{
-    margin-top: 23vw ;
+    
+   margin-top: 13rem;
+   margin-bottom: auto;
     width: 30%;
+    margin-right: 4vw;
     
   }
   main aside div.encart{
     border: 1px solid rgb(189, 188, 188);
     border-radius: 10px;
-   
-    margin-right: 4vw;
+   margin-top: 4rem;
+    
     line-height: 1.5;
    
   }
@@ -177,16 +180,18 @@
   }
 
   .right-div {
-    position: absolute;
-    margin-right: 10vw ;
-    
-    right: 0;
    
-    padding: 20px;
-    box-sizing: border-box;
+   
+    
+  
+   
+   
+  
 }
+
   .cssbuttons-io-button {
-    margin-top: 11vw;
+   margin-left: auto;
+   margin-right: auto;
     display: flex;
     align-items: center;
     font-family: inherit;
@@ -346,7 +351,7 @@ margin-left: 4vw;
 .heb-form{
 margin-right: 4vw;
 }
-@media (min-width: 300px) and (max-width: 359px) {
+/* @media (min-width: 300px) and (max-width: 359px) {
   .flex-main{
     display: block;
   }
@@ -459,35 +464,47 @@ margin-left: 1vw;
   margin-left: 4vw!important; 
 }
 }
+ */
+@media (min-width: 320px) and (max-width: 400px) {
 
-@media (min-width: 360px) and (max-width: 400px) {
   .flex-main{
     display: block;
   }
+  .section-presentation {
+  margin: 7.5rem 0 0 0 ;
+  }
+  main section#presentation {
+    margin-top: 7rem!important;
+    margin: auto 0;
+ width: 100%;
+  }
+  main aside div.encart  {
+  
+    margin: 1.5rem auto;
+    }
   .marge-aside {
-    margin: 0 3vw ;
+    margin: auto ;
    
     
    width: 98%;
 }
-.encart-droite{
-  margin-top: 6vw;
-  margin-bottom: 6vw;
-  width: 130%;
-}
 
+.encart-droite{
+margin: 4vw 0vw;
+width: 100%;
+}
 .text-center{
 margin-top: 3vw!important;
 }
   .presentation-div {
-    margin: 34vw 5vw 2vw 2vw;
+  
     padding: 0.5vw 1vw;
     height: 128vw;
-    width: 138%;
+   
 }
 .experiences{
-width: 134%;
-margin-left: 3vw;
+width: 98%;
+margin:auto 0;
 margin-bottom: 6vw;
 }
 .contact-he{
@@ -509,9 +526,8 @@ margin-left: 0vw;
 
 
 .cssbuttons-io-button{
- position: absolute;
-margin-top: -15vw;
-margin-left: -19vw;
+
+
 
 
 height: 30px;
@@ -523,7 +539,7 @@ margin-right: 3.5vw;
 
 .contact{
   margin-top: 2.5vw;
-  height: 70vw;
+  height: auto;
   margin-bottom: 3vw;
 }
 .ajout{
@@ -536,6 +552,7 @@ margin-right: 0px!important;
 
 .contactButton{
 margin-top: 6vw;
+margin-bottom: 1rem;
 }
 .exp-he{
 width: 139%;
@@ -548,29 +565,44 @@ margin-right: 2.5vw!important;
   display: flex;
   flex-direction: column;
   width: 100%;
- margin-left: 30vw;
+align-items: center;
+position: relative;
   }
+  
   main section#presentation .mise-en-avant figure {
-    position: relative;
-    width: 50%;
-    margin-top: 01vw;
+ 
+  display: flex!important;
+  flex-direction: row;
+  text-align: center;
+   width: 100%;
+   height: auto;
   
 }
-  
+main section#presentation .mise-en-avant figcaption {
+  margin-top: 3rem;
+  margin-right: 1.5rem;
+}
 
 main section#presentation .mise-en-avant h4 {
+  text-align: center;
+
 width: 100%;
 font-size: 20px;
-margin-left: 1vw;
+text-transform: uppercase;
+
 
 
 }
+
 .img-card{
-  width: 29vw!important;
-  height:29vw!important; 
 
   
-  margin-left: 4vw!important; 
+
+  width: 20vw!important;
+  height:20vw!important; 
+
+  margin-top: 3rem!important;
+  
 }
 }
 @media (min-width: 400px) and (max-width: 700px) {
@@ -578,9 +610,12 @@ margin-left: 1vw;
     display: block;
   }
  
+  main aside div.encart  {
   
+    margin: 1.5rem auto;
+    }
   .marge-aside {
-    margin: 0 3vw ;
+    margin: 0 auto ;
    
     
    width: 98%;
@@ -622,9 +657,7 @@ margin-left: 0vw;
 
 
 .cssbuttons-io-button{
- position: absolute;
-margin-top: -14vw;
-margin-left: -15vw;
+
 
 height: 30px;
 padding: 3px;
@@ -661,10 +694,9 @@ width: 140%;
 }
 }
 @media (min-width: 701px) and (max-width: 900px) {
-  main aside {
-    margin-top: 21vw;
-  height: 28vw;
- 
+.main-aside {
+  
+ margin-top: 5rem;
 }
 .contact{
   height: 39vw!important;
@@ -689,35 +721,53 @@ width: 140%;
     }
 main aside div.encart p {
   padding: 5px;
-  margin: 18px 12px;
+  margin: auto;
   }
   .section-presentation {
  
     height: 440px;
 }
 .cssbuttons-io-button{
-  margin-top: 7vw;
-  margin-right: -5vw;
+ 
   height: 6vw;
   }
-
+  .encart-droite-formation {
+  margin: 2.1rem auto;
+  }
+  .form-switch{
+  padding-left: 0!important;
+  }
 }
 @media (min-width: 900px) and (max-width: 1439px) {
 
-  
+  .f-size{
+  margin-top: auto;
+  }
+  .presentation-he{
+    margin-top: 5.7rem ;
+  }
+  .exp-titre-en{
+  margin-top: 4.3rem;
+  }
 
   .section-presentation {
  
     height: auto!important;
 }
+.main-aside {
+  margin-top: 8rem;
+}
+main aside div.encart  {
+  
+  margin: 3.8rem auto;
+  }
+
 main aside div.encart p {
   padding: 5px;
   margin: 18px 12px;
   }
   
-.contactButton{
-  margin-top: 30px;
-}
+
 .contact{
 height: auto!important;
 padding-bottom: 6px;
@@ -728,15 +778,20 @@ height: 7.1vw!important;
 .ajout{
 height: 25px!important;
 }
+
 }
 @media (min-width: 1440px) and (max-width: 2559px) {
+  .presentation-he{
+    margin-top: 10.1rem;
+  }
   main aside div.encart p {
     padding: 10px;
     margin: 18px 12px;
+    width: auto!important;
     }
     main aside div.encart p {
       padding: 5px;
-      margin: 18px 12px;
+      margin: 23px 12px;
       }
       .experiences{
       margin-top: 2.8vw;
@@ -746,7 +801,8 @@ height: 25px!important;
     margin-right: 77vw!important;
     }
       .contact{
-      height: 20.9vw;
+        
+      height: auto;
       }
       .contact-he{
         height: 20.9vw;
@@ -755,15 +811,18 @@ height: 25px!important;
       height: 50px;
       }
       .other{
-      height: 1.7vw;
+      height: 4.5rem;
       }
+    
+    
 }
 
-@media (max-width: 2560px) and (max-width: 3000px) {
+@media (min-width: 2560px) and (max-width: 3000px) {
 
   main aside {
-    margin-top: 23vw!important;
+    margin-top: 19rem!important;
     width: 30%;
+    margin-bottom: auto!important;
    
 }
   main aside div.encart p {
@@ -778,14 +837,13 @@ height: 25px!important;
     height: 330px;
 
 }
+
 .cssbuttons-io-button{
-margin-top: 12vw;
-margin-right: 3vw;
+
+
 
 }
-.encart-droite {
-  margin-top: 4vw;
-}
+
 
 
 .encart-droite-formation {
@@ -793,18 +851,17 @@ margin-right: 3vw;
 }
 
 .contact{
-  margin-top: 2.5vw;
+  margin-top: 2vw;
   height: auto;
 }
+
 .ajout{
   height: 1.9vw;
 }
 .other{
   height: 1.9vw;
 }
-.contactButton{
 
-}
 main section#presentation .mise-en-avant img{
 width: 5vw;
 height: 5vw;
