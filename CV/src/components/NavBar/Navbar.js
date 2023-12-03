@@ -7,7 +7,6 @@ const Navbar = () => {
 
   const changeOnOver = () => {
     const element = document.getElementsByClassName("flex-menu")[0]
-    // console.log("element",element)
     element.style.border = "2px blue solid"
   }
 

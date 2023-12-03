@@ -35,6 +35,7 @@ const Blog = () => {
       .then(function (response) {
         console.log(response.data.Table);
         setData(response.data.Table);
+        console.log(response.data.Table);
       })
       .catch(console.log('error'));
   }, []);

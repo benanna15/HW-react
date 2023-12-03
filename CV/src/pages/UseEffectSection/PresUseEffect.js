@@ -1,5 +1,6 @@
 import React from 'react'
 import NavbarOffCanva from '../../components/NavbarBoot/NavbarOffCanva'
+import intro from '../../assets/intro.png'
 
 const PresUseEffect = () => {
 
@@ -23,11 +24,17 @@ const PresUseEffect = () => {
     return (
         <>
             <NavbarOffCanva />
-            <div className="container">
-                <h1>Presentation du useEffect</h1>
+            <div className='background-image bckgd'>
+     <img src={intro} alt="Accueil" className="img-fluid   " />
+     </div>
+            <div className="container mt-5">
+              
                 <div className="bg-dark text-light p-5 rounded-4">
                     <pre>{code}</pre>
                 </div>
+                <h1>Presentation du useEffect</h1>
+                <p>Le useEffect se déclenche lorsque le composant est rendu, une seule fois si les crochets sont vides, sinon il se déclenche quand la variable change.
+                   <br /> Avec  return il se declenche lors du démontage du composant .</p>
             </div>
         </>
     )
