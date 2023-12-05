@@ -20,6 +20,7 @@
    
     text-align: center;
   }
+  
   .encart-droite-formation{
   
     border-top: 1px solid  rgba(254, 205, 170);
@@ -179,19 +180,12 @@
 
   }
 
-  .right-div {
-   
-   
-    
-  
-   
-   
-  
-}
+ 
 
   .cssbuttons-io-button {
    margin-left: auto;
    margin-right: auto;
+   
     display: flex;
     align-items: center;
     font-family: inherit;
@@ -246,7 +240,7 @@
     border-radius: 20em;
    
   }
-  
+ 
   .iconButton {
     margin-left: 1em;
     position: absolute;
@@ -350,6 +344,16 @@ margin-left: 4vw;
 }
 .heb-form{
 margin-right: 4vw;
+}
+.white::placeholder{
+  color: white;
+}
+
+.bg-dark-main{
+  --bs-bg-opacity: 1;
+  background-color: #545353d6 !important;
+/* color: #545353d6 ; */
+
 }
 /* @media (min-width: 300px) and (max-width: 359px) {
   .flex-main{
@@ -757,10 +761,14 @@ main aside div.encart p {
 .main-aside {
   margin-top: 8rem;
 }
+.cssbuttons-io-button {
+  margin-bottom: 8.5rem;
+}
 main aside div.encart  {
-  
-  margin: 3.8rem auto;
+
+  margin-bottom:auto;
   }
+
 
 main aside div.encart p {
   padding: 5px;

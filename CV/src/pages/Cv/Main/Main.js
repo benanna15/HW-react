@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from 'react-redux';
 import profil from "../../../assets/profil.png";
 import feok from "../../../assets/feok.png";
 import beok from "../../../assets/beok.png";
@@ -37,6 +38,7 @@ const Main = ({ HandleName }) => {
     return emailRegex.test(email);
   };
  
+  const darkMode = useSelector((state) => state.dark);
 
 
 const handleSubmit = (e) => {
@@ -108,6 +110,14 @@ const handleSubmit = (e) => {
 
     return downloadLink;
   };
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
   
   return (
     <main className={` container ${
@@ -130,7 +140,7 @@ const handleSubmit = (e) => {
                       : " "
                   }`}>
         <section id="presentation">
-          <div className={` bg-white shadow-lg rounded section-presentation presentation-div  ${
+          <div className={` ${darkMode ? 'bg-dark-main' : ' bg-white'} shadow-lg rounded section-presentation presentation-div  ${
                     language === "he"
                       ? "presentation-he"
                       : language === 'en' ? ""
@@ -264,17 +274,17 @@ const handleSubmit = (e) => {
           <span>Download</span>
           </a>
         </button>
-          <div className={` encart ${
+          <div className={` encart  ${
                     language === "he"
                       ? "qsj-he"
                       : language === 'en' ? ""
                       : ""
                   }`}>
             <h3>{t("cv.qsj")}</h3>
-            <p className=" mb-2 text-center bg-white">
+            <p className={`${darkMode ? 'body.dark-mode' : ' bg-white'} mb-2 text-center `}>
               {t("cv.presentation1")}
             </p>
-            <p className="mb-3 pb-1 text-center bg-white">
+            <p className={`${darkMode ? 'body.dark-mode' : ' bg-white'}mb-3 pb-1 text-center `}>
               {t("cv.presentation2")}
             </p>
           </div>
@@ -329,16 +339,17 @@ const handleSubmit = (e) => {
 <input
   required
   type="text"
-  className="input no-auto-rtl"
+  className={`${darkMode ? 'white ' : ' '}input no-auto-rtl`}
   placeholder="Full Name"
   value={name}
   onChange={(e) => setName(e.target.value)}
+ 
 />
 
 <input
   required
   type="email"
-  className="input no-auto-rtl"
+  className={`${darkMode ? 'white ' : ' '}input no-auto-rtl`}
   placeholder="Email"
   value={mail}
   onChange={(e) => setMail(e.target.value)}
@@ -346,7 +357,7 @@ const handleSubmit = (e) => {
 
 <textarea
   required
-  className="input textarea no-auto-rtl"
+  className={`${darkMode ? 'white ' : ' '}input textarea no-auto-rt`}
   placeholder="Message"
   value={message}
   onChange={(e) => setMessage(e.target.value)}
