@@ -1,0 +1,9 @@
+.bg-black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(228, 220, 220, 0.6); /* Ajustez l'opacité selon vos besoins */
+  z-index: 1000; /* Assurez-vous que le fond noir est au-dessus du reste du contenu */
+}
