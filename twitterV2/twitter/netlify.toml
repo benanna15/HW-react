@@ -1,5 +1,7 @@
 [build]
     command = "CI= npm run build"
+     base = "twitterV2/twitter"
+  publish = "dist/"
    
 
 [[redirects]]
