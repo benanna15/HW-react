@@ -146,7 +146,7 @@ const handleSubmit = (e) => {
                       : language === 'en' ? ""
                       : " "
                   }`}>
-            <h2 className="align-item-center">{t("cv.presentation")}</h2>
+            <h2 className={` ${darkMode ? 'text-white ' : ''} align-item-center`}>{t("cv.presentation")}</h2>
 
             {/* <img src={profil} title=" de Prénom Nom" alt="Prénom Nom" /> */}
             <div className="">
