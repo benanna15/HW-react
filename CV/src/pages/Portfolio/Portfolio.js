@@ -110,13 +110,13 @@ const Portfolio = () => {
 
     <div  className={`${"container texte-center no-auto-rtl "}`}  >
 
-      <button className="buttons mn-4" onClick={() => handleButtonClick('html')} >HTML</button>
-      <button className='buttons mn-4' onClick={() => handleButtonClick('javascript')}>JavaScript</button>
-      <button className="buttons mn-4" onClick={() => handleButtonClick('react')}>React</button>
-      <button className="buttons mn-4" onClick={() => handleButtonClick('react')}>NodesJS</button>
-      <button className=" buttons mn-4" onClick={() => handleButtonClick('react')}>Python</button>
+      <button  className={` ${darkMode ? 'buttons-dark mn-4 bg-grey text-white' : 'buttons mn-4'}`}onClick={() => handleButtonClick('html')} >HTML</button>
+      <button  className={` ${darkMode ? 'buttons-dark mn-4 bg-grey text-white' : 'buttons mn-4'}`} onClick={() => handleButtonClick('javascript')}>JavaScript</button>
+      <button  className={` ${darkMode ? 'buttons-dark mn-4 bg-grey text-white' : 'buttons mn-4'}`} onClick={() => handleButtonClick('react')}>React</button>
+      <button  className={` ${darkMode ? 'buttons-dark mn-4 bg-grey text-white' : 'buttons mn-4'}`} onClick={() => handleButtonClick('react')}>NodesJS</button>
+      <button  className={` ${darkMode ? 'buttons-dark mn-4 bg-grey text-white' : 'buttons mn-4'}`} onClick={() => handleButtonClick('react')}>Python</button>
 
-      <button className="buttons mn-4" onClick={() => handleButtonClick('init')}>All</button>
+      <button className={` ${darkMode ? 'buttons-dark mn-4 bg-grey text-white' : 'buttons mn-4'}`} onClick={() => handleButtonClick('init')}>All</button>
 
       <div className='d-flex flex-wrap justify-content-around  '>
      
@@ -125,17 +125,17 @@ const Portfolio = () => {
         filteredProducts.map((row) => (
          
           <div key={row.id} className={` ${darkMode ? 'bg-grey  text-white' : 'bg-white '} shadow-lg rounded m-3 mb-5 p-3  card`} style={{ width: '30%', minWidth: '250px' }}>
-            <h2>{language === 'he' ? row.TitreHE : language === 'en' ? row.TitreEN : row.Titre}</h2>
+            <h2 className={` ${darkMode ? ' text-black' : 'bg-white '} `}>{language === 'he' ? row.TitreHE : language === 'en' ? row.TitreEN : row.Titre}</h2>
             
             <a href={row.url}>
             <img src={row.Image} className="img-fluid  shadow rounded" alt="" />
             </a>
-            <h4 className="mt-2">
+            <h4 className={` ${darkMode ? ' text-black' : 'bg-white '} mt-2`}>
               {language === 'he' ? row.Titre_1HE : language === 'en' ? row.Titre_1EN : row.Titre_1}
             </h4>
-            <p>{language === 'he' ? row.Texte1HE : language === 'en' ? row.Texte1EN : row.Texte1}</p>
-            <h4>{language === 'he' ? row.Titre_textHE : language === 'en' ? row.Titre_textEN : row.Titre_text}</h4>
-            <p>{language === 'he' ? row.TexteHE : language === 'en' ? row.TexteEN : row.Texte}</p>
+            <p className={` ${darkMode ? ' text-black' : 'bg-white '} `}>{language === 'he' ? row.Texte1HE : language === 'en' ? row.Texte1EN : row.Texte1}</p>
+            <h4 className={` ${darkMode ? ' text-black' : 'bg-white '} `}>{language === 'he' ? row.Titre_textHE : language === 'en' ? row.Titre_textEN : row.Titre_text}</h4>
+            <p className={` ${darkMode ? ' text-black' : 'bg-white '} `}>{language === 'he' ? row.TexteHE : language === 'en' ? row.TexteEN : row.Texte}</p>
             <figure className="texte-center">
         
             {/* <div className="d-flex  justify-content-between align-items-end  ">

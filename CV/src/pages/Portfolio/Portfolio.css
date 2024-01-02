@@ -1,110 +1,120 @@
 .buttons {
-    background-color: white;
-    color: black;
-    border-radius: 10em;
-   
-    font-weight: 600;
-    padding: 1em 2em;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid black;
-    box-shadow: 0 0 0 0 black;
-  }
-  
-  .buttons:hover {
-    transform: translateY(-4px) translateX(-2px);
-    box-shadow: 2px 5px 0 0 black;
-  };
-  
-  .buttons:active {
-    transform: translateY(2px) translateX(1px);
-    box-shadow: 0 0 0 0 black;
-  };
+  background-color: white;
+  color: black;
+  border-radius: 10em;
+ 
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+}
+.buttons-dark {
+  background-color: rgb(33,37,41);
+  color: black;
+  border-radius: 10em;
+ 
+  font-weight: 600;
+  padding: 1em 2em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+  box-shadow: 0 0 0 0 black;
+}
 
-  .card {
-    width: 230px;
-    border-radius: 20px;
-    background: #1b233d;
-    padding: 5px;
-    overflow: hidden;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
-    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.buttons:hover, .buttons-dark:hover {
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 2px 5px 0 0 black;
+};
+
+.buttons:active, .buttons-dark:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+};
+
+.card {
+  width: 230px;
+  border-radius: 20px;
+  background: #1b233d;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.mn-4{
+  margin: 1.5rem!important;
+}
+.texte-center{
+text-align: center;
+}
+
+@media (min-width: 300px) and (max-width: 374px){
+  .texte-center{
+    margin-top: 32vw!important;
+  }
+  .buttons, .buttons-dark{
+
+    padding: 3vw;
   }
  
-  .card:hover {
-    transform: scale(1.05);
-  }
   .mn-4{
-    margin: 1.5rem!important;
+    margin-top: 30px!important;
+    margin-left: 4px!important;
+    margin-right: 3px!important;
   }
-  .texte-center{
-  text-align: center;
-  }
- 
-  @media (min-width: 300px) and (max-width: 374px){
-    .texte-center{
-      margin-top: 32vw!important;
-    }
-    .buttons{
-  
-      padding: 3vw;
-    }
-   
-    .mn-4{
-      margin-top: 30px!important;
-      margin-left: 4px!important;
-      margin-right: 3px!important;
-    }
-    .card{
-    width: 320px!important;
-    height: 120vw!important;
-    }
-  }
-  @media (min-width: 375px) and (max-width: 425px){
-    .texte-center{
-      margin-top: 20vw!important;
-    }
-    .buttons{
-     
-      padding: 1vw 1vw;
-    }
-
-    .card{
-    width: 370px!important;
-    height: 100vw!important;
-    }
-  }
-  @media (min-width: 500px) and (max-width: 799px){
-    .buttons{
-      padding: 2vw 3vw;
-    }
-    
-
-    .card{
-   
-    height: 56vw!important;
-  }
-
-    
-  }
-  @media (min-width: 800px) and (max-width: 1024px) {
-    .buttons{
-      padding: 1vw 2vw;
-    }
-  }
-  @media (max-width: 1440px) {
-
-  .texte-center{
-    margin-top: 6vw;
-    
+  .card{
+  width: 320px!important;
+  height: 120vw!important;
   }
 }
-  @media (min-width: 2560px) and (max-width: 3840px) {
-  
-    .texte-center{
-      margin-top: 3vw;
-    }
-  
+@media (min-width: 375px) and (max-width: 425px){
+  .texte-center{
+    margin-top: 20vw!important;
+  }
+  .buttons, .buttons-dark{
+   
+    padding: 1vw 1vw;
   }
 
+  .card{
+  width: 370px!important;
+  height: 100vw!important;
+  }
+}
+@media (min-width: 500px) and (max-width: 799px){
+  .buttons, .buttons-dark{
+    padding: 2vw 3vw;
+  }
+  
+
+  .card{
  
+  height: 56vw!important;
+}
+
+  
+}
+@media (min-width: 800px) and (max-width: 1024px) {
+  .buttons, .buttons-dark{
+    padding: 1vw 2vw;
+  }
+}
+@media (max-width: 1440px) {
+
+.texte-center{
+  margin-top: 6vw;
+  
+}
+}
+@media (min-width: 2560px) and (max-width: 3840px) {
+
+  .texte-center{
+    margin-top: 3vw;
+  }
+
+}
