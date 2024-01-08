@@ -58,7 +58,7 @@ const Accueil = () => {
                       language === "he" ? " text-end me-4" : "no-auto-rtl text-start"
                     }`} >{t("accueil.texte1")}</h1>
            <hr className='text-decoration-underline'></hr>
-           <div className='d-flex align-items-center col-12 no-auto-rtl div-accueil'>
+           <div className='d-flex align-items-center col-12 no-auto-rtl div-accueil '>
             <img src={intro} alt="Accueil" className={`img-fluid col-8 image-txt  ${
                       language === "he" ? " mt-5" : "mb-4"
                     }`} />
@@ -68,13 +68,13 @@ const Accueil = () => {
                       language === "he" ? " auto-rtl mt-5" : ""
                     }`}  dangerouslySetInnerHTML={{ __html: t('accueil.texte2') }}></p>
          
-           <p className='mb-2'>{t("accueil.texte3")}</p>
+           <p className='mb-1'>{t("accueil.texte3")}</p>
            <br />
            
-           <p className='mb-2 txt4'>{t("accueil.texte4")}</p>
+           <p className='mb-1 txt4'>{t("accueil.texte4")}</p>
            <Link to='/cv' className=" ">
-            <button className={`purple mthp-1 btn-hp${
-                      language === "he" ? "  mt-4" : ""
+            <button className={`purple mthp-1 btn-hp ${
+                      language === "he" ? "  mt-4 " : ""
                     }` }><p className='m-auto'>{t("accueil.entrer")}</p></button>
          
         </Link>  
