@@ -124,13 +124,13 @@ const Portfolio = () => {
       
         filteredProducts.map((row) => (
          
-          <div key={row.id} className={` ${darkMode ? 'bg-grey  text-white' : 'bg-white '} shadow-lg rounded m-3 mb-5 p-3  card`} style={{ width: '30%', minWidth: '250px' }}>
-            <h2 className={` ${darkMode ? ' text-black' : 'bg-white '} `}>{language === 'he' ? row.TitreHE : language === 'en' ? row.TitreEN : row.Titre}</h2>
+          <div key={row.id} className={` ${darkMode ? 'bg-grey  text-white' : 'bg-white '} shadow-lg rounded m-3  mb-5 p-3  card`} style={{ width: '30%', minWidth: '250px' }}>
+            <h2 className={` my-4 ${darkMode ? ' text-black' : 'bg-white '} `}>{language === 'he' ? row.TitleHE : language === 'en' ? row.TitleEN : row.Titre}</h2>
             
             <a href={row.url}>
             <img src={row.Image} className="img-fluid  shadow rounded" alt="" />
             </a>
-            <h4 className={` ${darkMode ? ' text-black' : 'bg-white '} mt-2`}>
+            <h4 className={` ${darkMode ? ' text-black' : 'bg-white '} mt-5`}>
               {language === 'he' ? row.Titre_1HE : language === 'en' ? row.Titre_1EN : row.Titre_1}
             </h4>
             <p className={` ${darkMode ? ' text-black' : 'bg-white '} `}>{language === 'he' ? row.Texte1HE : language === 'en' ? row.Texte1EN : row.Texte1}</p>

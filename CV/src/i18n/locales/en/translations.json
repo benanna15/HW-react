@@ -24,7 +24,7 @@
   
 "cv": {
   "presentation": "Presentation",
-  "qsj": "Who am I?",
+  "qsj": "Who I am?",
   "presentation1": "Passionate about interface development and database management, I was trained and graduated from the Webschool Academy in Tel Aviv.",
   "presentation2": "I am excited to bring my creative mindset, project management skills, and aesthetic sensibility to my web development projects.",
   "qui1": "With an initial background in fashion and experience as a stylist/pattern maker, I have nurtured my creativity and artistic sensibility.",
@@ -33,7 +33,7 @@
   "competences": "Professional Skills",
   "design": "HTML, CSS, Bootstrap",
   "fe": "JavaScript, React",
-  "be": "NodeJS, MongoDB",
+  "be": "NodeJS, MongoDB, Python",
   "autre": "Photoshop, Premiere",
   "experience": "Experience",
   "dev": "Full Stack Developer",
